@@ -1,6 +1,6 @@
 /*
- * EX APIs
- * This is the external API specification for EX endpoints.
+ * Qualtrics API
+ * This is the API specification for Qualtrics platform.
  *
  * The version of the OpenAPI document: 3.0.0
  * 
@@ -97,20 +97,50 @@ public class JSON {
         gsonBuilder.registerTypeAdapter(LocalDate.class, localDateTypeAdapter);
         gsonBuilder.registerTypeAdapter(byte[].class, byteArrayAdapter);
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.BatchGetParticipantResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateContactExportRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateContactExportRequestEmbeddedData.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateContactExportResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateDirectoryContactRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateDirectoryContactResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateTransactionContactsImportRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateTransactionContactsImportRequestContactsInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateTransactionContactsImportRequestTransactionMeta.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.CreateTransactionContactsImportResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.DefaultErrorResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.DirectoryContactMailingListsResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.EX360CopyRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ElementsInner.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ElementsInner1.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.EmailHistory.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.EmailHistoryBounceInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Error.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Evaluator.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.EvaluatorImportBody.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.EvaluatorRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetContactExportFileResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetContactExportProgress.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetDirectoryContactEmailHistoryResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetDirectoryContactHistoryResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetDirectoryContactResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetDirectoryContactResponseHistoryResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetImportReportResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetImportReportResponseResults.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetTransactionContactsImportStatusResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.GetTransactionContactsImportSummaryResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ImportEvaluatorResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ImportReportEntry.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.JobId.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.JobInfo.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.JobResult.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.JobResultsBucket.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ListDirectoryContactsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.MailingListMembership.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.MailingListMembershipDetails.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Meta.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.MetaInError.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.MetadataFilter.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.NumericFilter.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.PageOfContacts.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Participant.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ParticipantData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ParticipantImportBody.CustomTypeAdapterFactory());
@@ -118,9 +148,39 @@ public class JSON {
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ParticipantResponse.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ParticipantsSearchRequest.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ProjectIdsResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ResponseHistory.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result1.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result10.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result11.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result12.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result1Contacts.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result1ContactsCount.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result1Transactions.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result1TransactionsCount.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result2.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result2Contacts.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result2ContactsCount.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result2Transactions.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result2TransactionsCount.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result3.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result4.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result5.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result6.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result7.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result8.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.Result9.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ResultContacts.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.ResultTracking.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.SearchDirectoryContactRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.SearchDirectoryContactResponse.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.SegmentMembershipDetails.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.SingleContact.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.StringFilter.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.SubjectData.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.SubjectImportBody.CustomTypeAdapterFactory());
         gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.SubjectRequest.CustomTypeAdapterFactory());
+        gsonBuilder.registerTypeAdapterFactory(new pl.wtx.qualtrics.api.client.model.UpdateDirectoryContactResponse.CustomTypeAdapterFactory());
         gson = gsonBuilder.create();
     }
 

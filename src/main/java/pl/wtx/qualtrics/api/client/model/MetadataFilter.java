@@ -1,6 +1,6 @@
 /*
- * EX APIs
- * This is the external API specification for EX endpoints.
+ * Qualtrics API
+ * This is the API specification for Qualtrics platform.
  *
  * The version of the OpenAPI document: 3.0.0
  * 

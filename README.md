@@ -6,10 +6,13 @@
 A lightweight Java client library for Qualtrics API integration. Built for Java developers who need to integrate their applications with the Qualtrics Employee Experience platform. 🚀
 
 This API client provides type-safe Java interfaces for Qualtrics API, enabling seamless management of:
-- Participant directories
-- EX projects
-- Project invitations
-- Employee experience operations
+- Bulk importing contacts along with their transaction data
+- Creating, managing, and sending surveys to contacts
+- Tracking and managing contact history and activity
+- Exporting contact data for external use
+- Managing participants within Employee Experience project directories
+- Creating and administering EX projects and their participants
+- Retrieving project IDs for participants with incomplete project involvement
 
 ## ✨ Why Choose This Client?
 
@@ -20,27 +23,32 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 
 ## 🎯 Implemented Features
 
-### Employee Experience (EX) API Features
+- ✅ Contact Imports API  
+  - Bulk import contacts  
+  - Import transaction data for contacts
 
-- ✅ Directories API
-  - List all directories
-  - Create a new directory
-  - Get a specific directory
-  - Update a directory
-  - Delete a directory
+- ✅ Contacts / Directory Contacts API  
+  - Create contacts  
+  - Manage contacts  
+  - Send surveys to contacts
 
-- ✅ Projects API
-  - List all projects
-  - Create a new project
-  - Get a specific project
-  - Update a project
-  - Delete a project
+- ✅ Contacts / Directory Contacts History API  
+  - Manage contact history  
+  - Track contact changes and activity
+
+- ✅ Contacts / Contact Exports API  
+  - Export contact data  
+
+- ✅ EX APIs / Directories  
+  - Manage Employee Experience project participants
+
+- ✅ EX APIs / Projects  
+  - Manage Employee Experience projects  
   - Manage project participants
 
-- ✅ Invitations API
-  - Send project invitations
-  - Manage invitation status
-  - Retrieve invitation history
+- ✅ EX APIs / EX Invitations  
+  - Retrieve incomplete project IDs for participants
+
 
 ## 🚨 Project Status
 
@@ -51,7 +59,7 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 
 ## 📦 Version Information
 
-- **Current Version**: `0.1.0`
+- **Current Version**: `0.1.1`
 - **Supported API Version**: `v3`
 - **Java Compatibility**: Java 17+
 
@@ -81,7 +89,7 @@ Then add the locally built artifact to your project:
 <dependency>
     <groupId>pl.wtx.qualtrics</groupId>
     <artifactId>qualtrics-api-client</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 

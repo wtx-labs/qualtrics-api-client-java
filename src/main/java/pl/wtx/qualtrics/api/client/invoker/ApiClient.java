@@ -1,6 +1,6 @@
 /*
- * EX APIs
- * This is the external API specification for EX endpoints.
+ * Qualtrics API
+ * This is the API specification for Qualtrics platform.
  *
  * The version of the OpenAPI document: 3.0.0
  * 
@@ -79,8 +79,8 @@ public class ApiClient {
       new HashMap<String, ServerVariable>()
     ),
     new ServerConfiguration(
-      "https://sjc1.qualtrics.com/API/v3",
-      "San Jose, California Data Center (previously AZ)",
+      "https://pdx1.qualtrics.com/API/v3",
+      "Portland, Oregon Data Center (previously AZ OR SJC)",
       new HashMap<String, ServerVariable>()
     ),
     new ServerConfiguration(
