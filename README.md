@@ -98,6 +98,19 @@ Then add the locally built artifact to your project:
 Here's how to get EX directory participant data using the client:
 
 ```java
+package pl.wtx.qualtrics;
+
+import pl.wtx.qualtrics.api.client.ExApisDirectoriesApi;
+import pl.wtx.qualtrics.api.client.invoker.ApiException;
+import pl.wtx.qualtrics.api.client.model.ParticipantResponse;
+
+/**
+ * Qualtrics API Client - Usage Demo
+ * 
+ * @author WTX Labs
+ * @see https://github.com/wtx-labs/qualtrics-api-client-java
+ * @license MIT
+ */
 public class QualtricsApiClientUsageDemo {
 
     // TODO: Set your Qualtrics API base path!
@@ -114,7 +127,7 @@ public class QualtricsApiClientUsageDemo {
         apiClient.setBasePath(API_BASE_PATH);
         apiClient.addDefaultHeader("X-API-TOKEN", API_ACCESS_TOKEN);
 
-        DirectoriesApi directoriesApi = new DirectoriesApi(apiClient);
+        ExApisDirectoriesApi directoriesApi = new ExApisDirectoriesApi(apiClient);
 
         try {
 
