@@ -1,4 +1,4 @@
-# Qualtrics API Client
+# Qualtrics API Client for Java
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java Version](https://img.shields.io/badge/Java-17%2B-blue)](https://www.java.com)
