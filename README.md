@@ -162,7 +162,7 @@ public class QualtricsApiClientUsageDemo {
 
 ## 🔍 Keywords
 
-qualtrics java client, qualtrics ex api java, java qualtrics integration, qualtrics api v3 java, employee experience java integration, qualtrics java library, java rest api client qualtrics
+qualtrics java client, qualtrics ex api java, java qualtrics integration, qualtrics api v3 java, employee experience java integration, qualtrics java library, java rest api client qualtrics, qualtrics api client library for java
 
 🚀 Happy coding! 😊
 
