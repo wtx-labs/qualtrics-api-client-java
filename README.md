@@ -14,14 +14,14 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 - Creating and administering EX projects and their participants
 - Retrieving project IDs for participants with incomplete project involvement
 
-## ✨ Why Choose This Client?
+## ✨ Why choose this client?
 
 - 💡 **Type-Safe Java API** - fully typed interfaces for Qualtrics API endpoints
-- 🛡️ **Secure Authentication** - API token and OAuth2 support
-- 📚 **Clear Documentation** - comprehensive examples for Java integration
-- 🚀 **Java 17+ Support** - compatibility with latest Java versions
+- 🛡️ **Secure authentication** - API token and OAuth2 support
+- 📚 **Clear documentation** - comprehensive examples for Java integration
+- 🚀 **Java 17+ support** - compatibility with latest Java versions
 
-## 🎯 Implemented Features
+## 🎯 Implemented features
 
 - ✅ Contact Imports API  
   - Bulk import contacts  
@@ -64,14 +64,14 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
   - Delete a record from imported data project
   - Update a record in imported data project
 
-## 🚨 Project Status
+## 🚨 Project status
 
 > ⚠️ **Note: This is a development version!**
 > 
 > We are actively implementing more Qualtrics API features.
 > Contributions and feedback are welcome on GitHub!
 
-## 📦 Version Information
+## 📦 Version information
 
 - **Current Version**: `0.1.2`
 - **Supported API Version**: `v3`
@@ -85,7 +85,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 
 The only requirement is to preserve the original author attribution in the source code and documentation.
 
-## 🚀 Quick Start Guide
+## 🚀 Quick start guide
 
 ### 1️⃣ Installation
 
@@ -107,7 +107,7 @@ Then add the locally built artifact to your project:
 </dependency>
 ```
 
-### 2️⃣ Java Integration Example
+### 2️⃣ Java integration example
 
 Here's how to get EX directory participant data using the client:
 
@@ -162,13 +162,13 @@ public class QualtricsApiClientUsageDemo {
 }
 ```
 
-## 🔗 Get Involved
+## 🔗 Get involved
 
 - ✨ Check our [GitHub Issues](https://github.com/wtx-labs/qualtrics-api-client-java/issues) for latest updates
 - 💡 Have suggestions? Open an Issue or contribute to the project
 - 🌟 Star this repository if you find it helpful!
 
-## 📊 Project Statistics
+## 📊 Project statistics
 
 - ⭐ Actively developed
 - 🔄 Regular updates and improvements
@@ -176,7 +176,7 @@ public class QualtricsApiClientUsageDemo {
 
 ## 🔍 Keywords
 
-qualtrics java client, qualtrics ex api java, java qualtrics integration, qualtrics api v3 java, employee experience java integration, qualtrics java library, java rest api client qualtrics
+qualtrics java client, qualtrics ex api java, java qualtrics integration, qualtrics api v3 java, employee experience java integration, qualtrics java library, java rest api client qualtrics, qualtrics api client library for java
 
 🚀 Happy coding! 😊
 
