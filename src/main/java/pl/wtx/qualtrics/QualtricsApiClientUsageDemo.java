@@ -1,6 +1,6 @@
 package pl.wtx.qualtrics;
 
-import pl.wtx.qualtrics.api.client.ExApisDirectoriesApi;
+import pl.wtx.qualtrics.api.client.ExApiDirectoriesApi;
 import pl.wtx.qualtrics.api.client.invoker.ApiException;
 import pl.wtx.qualtrics.api.client.model.ParticipantResponse;
 
@@ -27,7 +27,7 @@ public class QualtricsApiClientUsageDemo {
         apiClient.setBasePath(API_BASE_PATH);
         apiClient.addDefaultHeader("X-API-TOKEN", API_ACCESS_TOKEN);
 
-        ExApisDirectoriesApi directoriesApi = new ExApisDirectoriesApi(apiClient);
+        ExApiDirectoriesApi directoriesApi = new ExApiDirectoriesApi(apiClient);
 
         try {
 

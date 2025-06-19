@@ -44,16 +44,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExApisDirectoriesApi {
+public class ExApiDirectoriesApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public ExApisDirectoriesApi() {
+    public ExApiDirectoriesApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public ExApisDirectoriesApi(ApiClient apiClient) {
+    public ExApiDirectoriesApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 

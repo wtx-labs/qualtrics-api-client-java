@@ -47,16 +47,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExApisProjectsApi {
+public class ExApiProjectsApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public ExApisProjectsApi() {
+    public ExApiProjectsApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public ExApisProjectsApi(ApiClient apiClient) {
+    public ExApiProjectsApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 

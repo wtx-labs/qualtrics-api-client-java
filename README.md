@@ -49,6 +49,20 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 - ✅ EX APIs / EX Invitations  
   - Retrieve incomplete project IDs for participants
 
+- ✅ Imported Data Project API
+  - Create imported data project
+  - Get imported data project status
+  - Add columns to imported data project
+  - Start an IDP export
+  - Get export progress
+  - Get export file
+
+- ✅ Imported Data Project Records API
+  - Add single record
+  - Add records to imported data project (bulk)
+  - Get a record from imported data project
+  - Delete a record from imported data project
+  - Update a record in imported data project
 
 ## 🚨 Project Status
 
@@ -59,7 +73,7 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 
 ## 📦 Version Information
 
-- **Current Version**: `0.1.1`
+- **Current Version**: `0.1.2`
 - **Supported API Version**: `v3`
 - **Java Compatibility**: Java 17+
 
@@ -89,7 +103,7 @@ Then add the locally built artifact to your project:
 <dependency>
     <groupId>pl.wtx.qualtrics</groupId>
     <artifactId>qualtrics-api-client</artifactId>
-    <version>0.1.1</version>
+    <version>0.1.2</version>
 </dependency>
 ```
 
@@ -100,7 +114,7 @@ Here's how to get EX directory participant data using the client:
 ```java
 package pl.wtx.qualtrics;
 
-import pl.wtx.qualtrics.api.client.ExApisDirectoriesApi;
+import pl.wtx.qualtrics.api.client.ExApiDirectoriesApi;
 import pl.wtx.qualtrics.api.client.invoker.ApiException;
 import pl.wtx.qualtrics.api.client.model.ParticipantResponse;
 
@@ -127,7 +141,7 @@ public class QualtricsApiClientUsageDemo {
         apiClient.setBasePath(API_BASE_PATH);
         apiClient.addDefaultHeader("X-API-TOKEN", API_ACCESS_TOKEN);
 
-        ExApisDirectoriesApi directoriesApi = new ExApisDirectoriesApi(apiClient);
+        ExApiDirectoriesApi directoriesApi = new ExApiDirectoriesApi(apiClient);
 
         try {
 

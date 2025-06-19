@@ -36,16 +36,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class ExApisExInvitationsApi {
+public class ExApiExInvitationsApi {
     private ApiClient localVarApiClient;
     private int localHostIndex;
     private String localCustomBaseUrl;
 
-    public ExApisExInvitationsApi() {
+    public ExApiExInvitationsApi() {
         this(Configuration.getDefaultApiClient());
     }
 
-    public ExApisExInvitationsApi(ApiClient apiClient) {
+    public ExApiExInvitationsApi(ApiClient apiClient) {
         this.localVarApiClient = apiClient;
     }
 
