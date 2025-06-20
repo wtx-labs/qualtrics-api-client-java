@@ -43,6 +43,38 @@ jobs:
           gpg --list-secret-keys --keyid-format LONG
           gpg --list-keys --keyid-format LONG
       
+      - name: Setup GPG
+        env:
+          GPG_PRIVATE_KEY: ${{ secrets.GPG_PRIVATE_KEY }}
+          GPG_KEYNAME: ${{ secrets.GPG_KEYNAME }}
+          GPG_PASSPHRASE: ${{ secrets.GPG_PASSPHRASE }}
+        run: |
+          echo "Setting up GPG..."
+          mkdir -p ~/.gnupg
+          chmod 700 ~/.gnupg
+          
+          # Debug: Sprawdź długość klucza (bez wyświetlania treści)
+          echo "GPG_PRIVATE_KEY length: ${#GPG_PRIVATE_KEY}"
+          
+          # Importuj klucz
+          echo "$GPG_PRIVATE_KEY" | gpg --batch --import
+          
+          # Konfiguruj GPG tylko jeśli klucz istnieje
+          if gpg --list-secret-keys "$GPG_KEYNAME" > /dev/null 2>&1; then
+            echo "Configuring GPG..."
+            cat > ~/.gnupg/gpg.conf << EOF
+            default-key $GPG_KEYNAME
+            use-agent
+            pinentry-mode loopback
+            EOF
+              
+            echo "=== GPG Keys ==="
+            gpg --list-secret-keys --keyid-format LONG
+          else
+            echo "::error::GPG key import failed!"
+            exit 1
+          fi
+
       - name: Configure Maven
         run: |
           mkdir -p ~/.m2
