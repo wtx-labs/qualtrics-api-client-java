@@ -2,6 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Java Version](https://img.shields.io/badge/Java-17%2B-blue)](https://www.java.com)
+[![Maven Central](https://img.shields.io/maven-central/v/pl.wtx.qualtrics/qualtrics-api-client?label=Maven%20Central&logo=apache-maven&color=blue)](https://mvnrepository.com/artifact/pl.wtx.qualtrics/qualtrics-api-client)
 
 A lightweight Java client library for Qualtrics API integration. Built for Java developers who need to integrate their applications with the Qualtrics Employee Experience platform. 🚀
 
@@ -89,7 +90,25 @@ The only requirement is to preserve the original author attribution in the sourc
 
 ### 1️⃣ Installation
 
-Clone and build the library from source:
+You can add the library to your project by including the dependency from Maven Central:
+```xml
+<!-- https://mvnrepository.com/artifact/pl.wtx.qualtrics/qualtrics-api-client -->
+<dependency>
+    <groupId>pl.wtx.qualtrics</groupId>
+    <artifactId>qualtrics-api-client</artifactId>
+    <version>0.1.2</version>
+</dependency>
+```
+
+Alternatively, clone and build the library from source:
+
+```sh
+git clone https://github.com/wtx-labs/qualtrics-api-client-java.git
+cd qualtrics-api-client-java
+mvn clean install
+```
+
+Then add the locally built artifact to your project:
 
 ```sh
 git clone https://github.com/wtx-labs/qualtrics-api-client-java.git
