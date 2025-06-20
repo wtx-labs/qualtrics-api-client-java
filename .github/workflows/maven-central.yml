@@ -76,7 +76,7 @@ jobs:
             </profiles>
           </settings>
           EOF
-      
+
       - name: Build and Publish
         env:
           OSSRH_USERNAME: ${{ secrets.OSSRH_USERNAME_TOKEN }}
@@ -89,9 +89,10 @@ jobs:
             -Dmaven.javadoc.skip=false \
             -Dmaven.deploy.skip=false \
             -Dgpg.keyname=$GPG_KEYNAME \
-            -Dgpg.useagent=true \
+            -Dgpg.useagent=false \
+            -Dgpg.passphrase=$GPG_PASSPHRASE \
             -Dmaven.test.failure.ignore=false \
-            -DaltDeploymentRepository=ossrh::default::https://central.sonatype.com/api/v1/publisher/upload \
+            -DaltDeploymentRepository=ossrh::default::https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/ \
             -DrepositoryId=ossrh \
             -Dusername=$OSSRH_USERNAME \
             -Dpassword=$OSSRH_PASSWORD
