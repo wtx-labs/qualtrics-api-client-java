@@ -110,14 +110,6 @@ mvn clean install
 
 Then add the locally built artifact to your project:
 
-```sh
-git clone https://github.com/wtx-labs/qualtrics-api-client-java.git
-cd qualtrics-api-client-java
-mvn clean install
-```
-
-Then add the locally built artifact to your project:
-
 ```xml
 <dependency>
     <groupId>pl.wtx.qualtrics</groupId>
