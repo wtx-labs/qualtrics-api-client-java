@@ -47,19 +47,19 @@ import java.util.Set;
 import pl.wtx.qualtrics.api.client.invoker.JSON;
 
 /**
- * ImportEvaluatorResponse
+ * DeleteContactResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
-public class ImportEvaluatorResponse {
+public class DeleteContactResponse {
   public static final String SERIALIZED_NAME_META = "meta";
   @SerializedName(SERIALIZED_NAME_META)
   @javax.annotation.Nonnull
   private Meta meta;
 
-  public ImportEvaluatorResponse() {
+  public DeleteContactResponse() {
   }
 
-  public ImportEvaluatorResponse meta(@javax.annotation.Nonnull Meta meta) {
+  public DeleteContactResponse meta(@javax.annotation.Nonnull Meta meta) {
     this.meta = meta;
     return this;
   }
@@ -87,8 +87,8 @@ public class ImportEvaluatorResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ImportEvaluatorResponse importEvaluatorResponse = (ImportEvaluatorResponse) o;
-    return Objects.equals(this.meta, importEvaluatorResponse.meta);
+    DeleteContactResponse deleteContactResponse = (DeleteContactResponse) o;
+    return Objects.equals(this.meta, deleteContactResponse.meta);
   }
 
   @Override
@@ -99,7 +99,7 @@ public class ImportEvaluatorResponse {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ImportEvaluatorResponse {\n");
+    sb.append("class DeleteContactResponse {\n");
     sb.append("    meta: ").append(toIndentedString(meta)).append("\n");
     sb.append("}");
     return sb.toString();
@@ -134,25 +134,25 @@ public class ImportEvaluatorResponse {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to ImportEvaluatorResponse
+   * @throws IOException if the JSON Element is invalid with respect to DeleteContactResponse
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ImportEvaluatorResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ImportEvaluatorResponse is not found in the empty JSON string", ImportEvaluatorResponse.openapiRequiredFields.toString()));
+        if (!DeleteContactResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in DeleteContactResponse is not found in the empty JSON string", DeleteContactResponse.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ImportEvaluatorResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ImportEvaluatorResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!DeleteContactResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DeleteContactResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
 
       // check to make sure all required properties/fields are present in the JSON string
-      for (String requiredField : ImportEvaluatorResponse.openapiRequiredFields) {
+      for (String requiredField : DeleteContactResponse.openapiRequiredFields) {
         if (jsonElement.getAsJsonObject().get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonElement.toString()));
         }
@@ -166,22 +166,22 @@ public class ImportEvaluatorResponse {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ImportEvaluatorResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ImportEvaluatorResponse' and its subtypes
+       if (!DeleteContactResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'DeleteContactResponse' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ImportEvaluatorResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ImportEvaluatorResponse.class));
+       final TypeAdapter<DeleteContactResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(DeleteContactResponse.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ImportEvaluatorResponse>() {
+       return (TypeAdapter<T>) new TypeAdapter<DeleteContactResponse>() {
            @Override
-           public void write(JsonWriter out, ImportEvaluatorResponse value) throws IOException {
+           public void write(JsonWriter out, DeleteContactResponse value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ImportEvaluatorResponse read(JsonReader in) throws IOException {
+           public DeleteContactResponse read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -192,18 +192,18 @@ public class ImportEvaluatorResponse {
   }
 
   /**
-   * Create an instance of ImportEvaluatorResponse given an JSON string
+   * Create an instance of DeleteContactResponse given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of ImportEvaluatorResponse
-   * @throws IOException if the JSON string is invalid with respect to ImportEvaluatorResponse
+   * @return An instance of DeleteContactResponse
+   * @throws IOException if the JSON string is invalid with respect to DeleteContactResponse
    */
-  public static ImportEvaluatorResponse fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ImportEvaluatorResponse.class);
+  public static DeleteContactResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, DeleteContactResponse.class);
   }
 
   /**
-   * Convert an instance of ImportEvaluatorResponse to an JSON string
+   * Convert an instance of DeleteContactResponse to an JSON string
    *
    * @return JSON string
    */

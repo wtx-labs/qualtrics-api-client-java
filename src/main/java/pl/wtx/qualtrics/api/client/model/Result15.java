@@ -21,7 +21,6 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import pl.wtx.qualtrics.api.client.model.MailingListMembershipDetails;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -47,34 +46,58 @@ import java.util.Set;
 import pl.wtx.qualtrics.api.client.invoker.JSON;
 
 /**
- * The mailingListMembership object contains information about the mailing lists this contact belongs to. The object contains one object for each mailing list, with the mailing list ID as the object name.
+ * Result15
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.13.0")
-public class MailingListMembership {
-  public static final String SERIALIZED_NAME_MAILING_LIST_ID = "mailingListId";
-  @SerializedName(SERIALIZED_NAME_MAILING_LIST_ID)
+public class Result15 {
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
   @javax.annotation.Nullable
-  private MailingListMembershipDetails mailingListId;
+  private String id;
 
-  public MailingListMembership() {
+  public static final String SERIALIZED_NAME_CONTACT_LOOKUP_ID = "contactLookupId";
+  @SerializedName(SERIALIZED_NAME_CONTACT_LOOKUP_ID)
+  @javax.annotation.Nullable
+  private String contactLookupId;
+
+  public Result15() {
   }
 
-  public MailingListMembership mailingListId(@javax.annotation.Nullable MailingListMembershipDetails mailingListId) {
-    this.mailingListId = mailingListId;
+  public Result15 id(@javax.annotation.Nullable String id) {
+    this.id = id;
     return this;
   }
 
   /**
-   * Get mailingListId
-   * @return mailingListId
+   * 
+   * @return id
    */
   @javax.annotation.Nullable
-  public MailingListMembershipDetails getMailingListId() {
-    return mailingListId;
+  public String getId() {
+    return id;
   }
 
-  public void setMailingListId(@javax.annotation.Nullable MailingListMembershipDetails mailingListId) {
-    this.mailingListId = mailingListId;
+  public void setId(@javax.annotation.Nullable String id) {
+    this.id = id;
+  }
+
+
+  public Result15 contactLookupId(@javax.annotation.Nullable String contactLookupId) {
+    this.contactLookupId = contactLookupId;
+    return this;
+  }
+
+  /**
+   * The contact&#39;s unique ID in the mailing list.
+   * @return contactLookupId
+   */
+  @javax.annotation.Nullable
+  public String getContactLookupId() {
+    return contactLookupId;
+  }
+
+  public void setContactLookupId(@javax.annotation.Nullable String contactLookupId) {
+    this.contactLookupId = contactLookupId;
   }
 
 
@@ -87,20 +110,22 @@ public class MailingListMembership {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    MailingListMembership mailingListMembership = (MailingListMembership) o;
-    return Objects.equals(this.mailingListId, mailingListMembership.mailingListId);
+    Result15 result15 = (Result15) o;
+    return Objects.equals(this.id, result15.id) &&
+        Objects.equals(this.contactLookupId, result15.contactLookupId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(mailingListId);
+    return Objects.hash(id, contactLookupId);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class MailingListMembership {\n");
-    sb.append("    mailingListId: ").append(toIndentedString(mailingListId)).append("\n");
+    sb.append("class Result15 {\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    contactLookupId: ").append(toIndentedString(contactLookupId)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -123,7 +148,8 @@ public class MailingListMembership {
   static {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
-    openapiFields.add("mailingListId");
+    openapiFields.add("id");
+    openapiFields.add("contactLookupId");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -133,26 +159,28 @@ public class MailingListMembership {
    * Validates the JSON Element and throws an exception if issues found
    *
    * @param jsonElement JSON Element
-   * @throws IOException if the JSON Element is invalid with respect to MailingListMembership
+   * @throws IOException if the JSON Element is invalid with respect to Result15
    */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!MailingListMembership.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in MailingListMembership is not found in the empty JSON string", MailingListMembership.openapiRequiredFields.toString()));
+        if (!Result15.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Result15 is not found in the empty JSON string", Result15.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!MailingListMembership.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MailingListMembership` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!Result15.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Result15` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
-      // validate the optional field `mailingListId`
-      if (jsonObj.get("mailingListId") != null && !jsonObj.get("mailingListId").isJsonNull()) {
-        MailingListMembershipDetails.validateJsonElement(jsonObj.get("mailingListId"));
+      if ((jsonObj.get("id") != null && !jsonObj.get("id").isJsonNull()) && !jsonObj.get("id").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `id` to be a primitive type in the JSON string but got `%s`", jsonObj.get("id").toString()));
+      }
+      if ((jsonObj.get("contactLookupId") != null && !jsonObj.get("contactLookupId").isJsonNull()) && !jsonObj.get("contactLookupId").isJsonPrimitive()) {
+        throw new IllegalArgumentException(String.format("Expected the field `contactLookupId` to be a primitive type in the JSON string but got `%s`", jsonObj.get("contactLookupId").toString()));
       }
   }
 
@@ -160,22 +188,22 @@ public class MailingListMembership {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!MailingListMembership.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'MailingListMembership' and its subtypes
+       if (!Result15.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'Result15' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<MailingListMembership> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(MailingListMembership.class));
+       final TypeAdapter<Result15> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(Result15.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<MailingListMembership>() {
+       return (TypeAdapter<T>) new TypeAdapter<Result15>() {
            @Override
-           public void write(JsonWriter out, MailingListMembership value) throws IOException {
+           public void write(JsonWriter out, Result15 value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public MailingListMembership read(JsonReader in) throws IOException {
+           public Result15 read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -186,18 +214,18 @@ public class MailingListMembership {
   }
 
   /**
-   * Create an instance of MailingListMembership given an JSON string
+   * Create an instance of Result15 given an JSON string
    *
    * @param jsonString JSON string
-   * @return An instance of MailingListMembership
-   * @throws IOException if the JSON string is invalid with respect to MailingListMembership
+   * @return An instance of Result15
+   * @throws IOException if the JSON string is invalid with respect to Result15
    */
-  public static MailingListMembership fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, MailingListMembership.class);
+  public static Result15 fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Result15.class);
   }
 
   /**
-   * Convert an instance of MailingListMembership to an JSON string
+   * Convert an instance of Result15 to an JSON string
    *
    * @return JSON string
    */
