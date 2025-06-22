@@ -6,7 +6,7 @@
 
 	<groupId>pl.wtx.qualtrics</groupId>
 	<artifactId>qualtrics-api-client</artifactId>
-	<version>0.1.2</version>
+	<version>0.1.3</version>
 	<packaging>jar</packaging>
 
 	<name>Qualtrics API Client for Java</name>

@@ -16,6 +16,8 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 - Retrieving project IDs for participants with incomplete project involvement
 - Create, check status, and manage columns of imported data projects, as well as initiate, monitor, and download data exports
 - Add, retrieve, update and delete single or multiple records in imported data projects
+- Managing contacts within mailing lists
+- Retrieving detailed history for contacts in mailing lists
 
 ## ✨ Why choose this client?
 
@@ -66,7 +68,19 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
   - Get a record from imported data project
   - Delete a record from imported data project
   - Update a record in imported data project
+  
+- ✅ Mailing List Contacts API
+  - Create contact in mailing list
+  - List contacts in mailing list
+  - List bounced contacts in mailing list
+  - List opted-out contacts in mailing list
+  - Get contact in mailing list
+  - Update contact in mailing list
+  - Delete contact in mailing list
 
+- ✅ Mailing List Contacts History API
+  - Get contact history in mailing list
+  
 ## 🚨 Project status
 
 > ⚠️ **Note: This is a development version!**
@@ -76,7 +90,7 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 
 ## 📦 Version information
 
-- **Current Version**: `0.1.2`
+- **Current Version**: `0.1.3`
 - **Supported API Version**: `v3`
 - **Java Compatibility**: Java 17+
 
@@ -98,7 +112,7 @@ You can add the library to your project by including the dependency from Maven C
 <dependency>
     <groupId>pl.wtx.qualtrics</groupId>
     <artifactId>qualtrics-api-client</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
@@ -116,7 +130,7 @@ Then add the locally built artifact to your project:
 <dependency>
     <groupId>pl.wtx.qualtrics</groupId>
     <artifactId>qualtrics-api-client</artifactId>
-    <version>0.1.2</version>
+    <version>0.1.3</version>
 </dependency>
 ```
 
