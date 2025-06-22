@@ -14,6 +14,8 @@ This API client provides type-safe Java interfaces for Qualtrics API, enabling s
 - Managing participants within Employee Experience project directories
 - Creating and administering EX projects and their participants
 - Retrieving project IDs for participants with incomplete project involvement
+- Create, check status, and manage columns of imported data projects, as well as initiate, monitor, and download data exports
+- Add, retrieve, update and delete single or multiple records in imported data projects
 - Managing contacts within mailing lists
 - Retrieving detailed history for contacts in mailing lists
 
